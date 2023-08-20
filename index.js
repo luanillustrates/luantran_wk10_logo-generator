@@ -1,7 +1,5 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
 const createLogo = require('./lib/createLogo.js');
-const createShapes = require('./lib/createShapes.js');
 
 function init() {
     inquirer
@@ -29,13 +27,14 @@ function init() {
             },
         ])
         .then((answers) => {
-            const generatedLogo = createShapes(answers);
-
-            fs.writeFile('./examples/logo.svg', createLogo(generatedLogo), (err) => err ? console.error(err) : console.log('generated logo.sgv')
-            );
-
-        })
-        .catch((err) => console.error(err));
+            if (answers.text.length > 3) {
+                console.log("max 3 characters only");
+                init();
+            } else {
+                createLogo('./examples/logo.svg', answers);
+                console.log(createLogo, 'logo.svg created suuccessfully');
+            }
+        });
 }
 
 init();
