@@ -17,7 +17,7 @@ function init() {
             {
                 type: 'list',
                 name: 'logoShape',
-                choices: ['square', 'circle', 'triangle'],
+                choices: ['Square', 'Circle', 'Triangle'],
                 message: 'Pick a shape from the following',
             },
             {
@@ -27,12 +27,12 @@ function init() {
             },
         ])
         .then((answers) => {
-            if (answers.text.length > 3) {
-                console.log("max 3 characters only");
+            if (answers.logoName.length > 3) {
+                console.log("enter max 3 characters only for logo name");
                 init();
             } else {
                 createLogo('./examples/logo.svg', answers);
-                console.log(createLogo, 'logo.svg created suuccessfully');
+                console.log(createLogo, 'logo.svg created successfully');
             }
         });
 }
