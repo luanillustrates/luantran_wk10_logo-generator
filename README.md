@@ -19,7 +19,9 @@
   For functionality, install the inquirer package via the integrated terminal with the command 'npm install inquirer@8.2.4'. As well as the jest package to test the scripts.
 
   ## Usage
-  To run the script, run the 'node index.js' command in the integrated terminal and answer the prompts. 
+  To run the script, run the 'node index.js' command in the integrated terminal and answer the prompts.
+
+  Video walkthrough: https://drive.google.com/file/d/1NGvOYycpkuxOOBZPzFA0iSX1K-q_15DC/view?usp=sharing
 
   ## License
   This project utilises the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>

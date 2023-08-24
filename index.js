@@ -1,6 +1,8 @@
 const inquirer = require('inquirer');
+// link the svg create script
 const createLogo = require('./lib/createLogo.js');
 
+// starts function for questions to create the logo
 function init() {
     inquirer
         .prompt([
